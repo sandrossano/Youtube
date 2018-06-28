@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall"
+    tools:context="com.example.sandro.youtube.MainActivity">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="apri_popup_video"
+        android:text="Button"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/inizio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cerca">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/immagine" />
+
+        <ImageView
+            android:id="@+id/iutube"
+            android:layout_width="250dp"
+            android:layout_height="125dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/iutubb" />
+
+    </RelativeLayout>
+
+    <SearchView
+        android:id="@+id/cerca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:defaultFocusHighlightEnabled="false"
+        android:focusedByDefault="false"
+        android:iconifiedByDefault="false"
+        android:queryHint="Cerca Video" />
+
+    <view
+        android:id="@+id/view2"
+        class="com.google.android.youtube.player.YouTubePlayerView"
+        id="@+id/view"
+        layout_alignParentLeft="true"
+        layout_alignParentStart="true"
+        layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_below="@+id/cerca"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/aaa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2">
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/mp3"
+        android:onClick="apri_popup"
+        android:visibility="invisible" />
+
+</RelativeLayout>
